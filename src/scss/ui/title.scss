@@ -1,0 +1,12 @@
+.title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 34px;
+  color: var(--emperor);
+  .title-1 {
+
+  }
+  @include tablet {
+    font-size: 24px;
+  }
+}

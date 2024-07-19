@@ -1,0 +1,125 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 190px 0px 125px 0px;
+  background: url("@img/bg-shadow-up.png") top 0 left 0 / cover no-repeat;
+  z-index: 1;
+  @include desktop {
+    padding-top: 150px;
+  }
+  @include tablet {
+    padding: 125px 0px 60px 0px;
+  }
+  &__img-bg {
+    position: absolute;
+    z-index: -1;
+    &--cube {
+      width: 480px;
+      left: -50px;
+      bottom: 55px;
+      @include tablet {
+        display: none;
+      }
+    }
+    &--crane {
+      right: 0;
+      bottom: 0;
+      width: 680px;
+      @media (max-width: 1439px) {
+        width: 610px;
+        right: -100px;
+      }
+      @include laptop {
+        right: -320px;
+      }
+      @include tablet {
+        width: 480px;
+        right: -250px;
+      }
+    }
+  }
+  &__title {
+    max-width: 640px;
+    span {
+      font-size: 18px;
+      color: white;
+      padding: 8px 15px;
+      background-color: var(--green);
+      border-radius: 10px;
+    }
+    @include tablet {
+      max-width: 400px;
+      span {
+        font-size: inherit;
+        padding: 0;
+        color: var(--green);
+        background: transparent;
+      }
+    }
+  }
+  &__advantages {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    row-gap: 25px;
+    @include desktop {
+      max-width: 780px;
+    }
+    @include tablet {
+      max-width: 580px;
+    }
+  }
+  &__advantages-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 250px;
+    @include tablet {
+      max-width: 215px;
+    }
+  }
+  &__advantages-icon {
+    height: auto;
+  }
+  &__advantages-content {
+    margin: 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    span {
+      font-weight: 700;
+      font-size: 20px;
+    }
+    @include tablet {
+      font-size: 14px;
+      span {
+        font-size: inherit;
+      }
+    }
+  }
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    gap: 20px;
+    @include tablet {
+      flex-direction: column;
+      margin-top: 40px;
+      .btn {
+        max-width: 250px;
+        width: 100%;
+      }
+    }
+  }
+  &__btn-lift {
+    padding-left: 50px;
+    padding-right: 50px;
+    @include tablet {
+      padding: 15px;
+    }
+  }
+  &__btn-reviews {
+  }
+}

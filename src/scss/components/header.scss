@@ -1,0 +1,123 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 0px;
+  z-index: 100;
+  @include mobile {
+    padding: 10px 0px;
+  }
+  &__container {
+    @include flex-between;
+  }
+  &__logo {
+    @include desktop {
+      width: 140px;
+    }
+    @include tablet {
+      width: 100px;
+    }
+  }
+  &__messenegers {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    @include tablet {
+      order: 2;
+    }
+  }
+  &__messenegers-buttons {
+    display: flex;
+    gap: 6px;
+  }
+  &__messenegers-btn {
+    width: 38px;
+    height: 38px;
+    transition: transform 0.2s ease;
+    @include hover {
+      transform: rotate(45deg) scale(1.2);
+    }
+    @include tablet {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  &__messenegers-icon {
+    width: 100%;
+    height: 100%;
+  }
+  &__messenegers-content {
+    margin: 0;
+    max-width: 95px;
+    font-weight: 500;
+    font-size: 12px;
+    @include laptop {
+      display: none;
+    }
+  }
+  &__hours-work {
+    margin: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    max-width: 130px;
+    font-weight: 500;
+    font-size: 12px;
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--green-bright);
+    }
+    @include laptop {
+      display: none;
+    }
+  }
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    @include tablet {
+      order: 1;
+    }
+  }
+  &__contact-tel {
+    font-size: 25px;
+    transition: color .2s ease;
+    @include hover {
+      color: var(--green-bright);
+    }
+    @include tablet {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--emperor);
+    }
+    @include mobile-min {
+      font-size: 14px;
+    }
+  }
+  &__contact-mail {
+    width: fit-content;
+    display: inline-block;
+    font-size: 16px;
+    transition: color .2s ease;
+    @include hover {
+      color: var(--green-bright);
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+  &__call {
+    text-transform: none;
+    padding: 14px 24px;
+    @include tablet {
+      display: none;
+    }
+  }
+}
