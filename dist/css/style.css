@@ -585,7 +585,7 @@ body {
 }
 .catalog__item-title {
   margin-top: 3px;
-  font-size: 12px;
+  font-size: 12px!important;
   line-height: 120%;
   text-align: center;
   color: #000;
@@ -1016,11 +1016,11 @@ body {
     border: none
   }
   .messenegers__item {
-    padding: 5px
+    padding: 9px
   }
   .messenegers__icon {
-    width: 35px;
-    height: 35px
+    width: 40px;
+    height: 40px
   }
   .footer {
     color: var(--emperor);
