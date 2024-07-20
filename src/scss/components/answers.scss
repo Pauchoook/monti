@@ -1,0 +1,95 @@
+.answers {
+  position: relative;
+  padding: 165px 0px;
+  z-index: 1;
+  @include laptop {
+    padding: 110px 0px 60px 0px;
+  }
+  &__lift {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    width: 400px;
+    height: auto;
+    right: 120px;
+    bottom: 100px;
+    @media (max-width: 1439px) {
+      width: 350px;
+      right: 80px;
+    }
+    @include desktop {
+      width: 215px;
+      right: 0;
+    }
+    @include laptop {
+      display: none;
+    }
+  }
+  &__bg {
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+  }
+  &__title {
+    max-width: 480px;
+    @include laptop {
+      max-width: 345px;
+    }
+  }
+  &__info {
+    margin-top: 70px;
+    max-width: 765px;
+    @include laptop {
+      margin-top: 30px;
+    }
+  }
+  &__spoller {
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+  }
+  &__btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+    font-size: 20px;
+    font-weight: 500;
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: black;
+      transition: transform 0.2s ease;
+    }
+    &::before {
+      width: 20px;
+      height: 2px;
+      left: 0;
+    }
+    &::after {
+      height: 20px;
+      width: 2px;
+      left: 9px;
+    }
+    &._spoller-active {
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
+    @include mobile-min {
+      padding-left: 50px;
+    }
+  }
+  &__info-content {
+    padding-top: 20px;
+    margin: 0px 0px 0px auto;
+    max-width: calc(100% - 80px);
+    @include mobile-min {
+      max-width: calc(100% - 50px);
+    }
+  }
+}

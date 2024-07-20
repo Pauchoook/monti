@@ -1,0 +1,41 @@
+.footer {
+  padding: 15px 0px;
+  color: white;
+  background-color: black;
+  @include tablet {
+    color: var(--emperor);
+    background-color: transparent
+  }
+  &__container {
+    @include flex-between;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  &__logo {
+    width: 180px;
+  }
+  &__logo-img {
+    height: auto;
+    &--mobile {
+      display: none;
+    }
+    @include tablet {
+      display: none;
+      &--mobile {
+        display: block;
+      }
+    }
+  }
+  &__content {
+    margin: 0;
+    font-size: 16px;
+    text-decoration: underline;
+  }
+  &__politics {
+    font-size: 16px;
+    text-decoration: underline;
+    @include hover {
+      color: var(--green);
+    }
+  }
+}
