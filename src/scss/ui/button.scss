@@ -16,6 +16,10 @@
     font-size: 14px;
   }
   &.btn-stroke {
+    &.active {
+      background-color: var(--green);
+      color: white;
+    }
     @include hover {
       background-color: var(--green);
       color: white;
@@ -25,10 +29,9 @@
     font-weight: 700;
     color: white;
     background-color: var(--green);
-    box-shadow: 4px 4px 0 0 var(--green-black);
-    &:focus {
-      transform: translate(4px, 4px);
-      box-shadow: none;
+    &:hover {
+      color: black;
+      background-color: transparent;
     }
   }
   &.btn-dashed {

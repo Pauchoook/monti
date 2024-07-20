@@ -116,6 +116,14 @@
   &__btn-lift {
     padding-left: 50px;
     padding-right: 50px;
+    box-shadow: 4px 4px 0 0 var(--green-black);
+    &:focus {
+      transform: translate(4px, 4px);
+      box-shadow: none;
+    }
+    @include hover {
+      cursor: pointer;
+    }
     @include tablet {
       padding: 15px;
     }

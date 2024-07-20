@@ -1,0 +1,143 @@
+.catalog {
+  padding: 100px 0px 50px 0px;
+  @include tablet {
+    padding: 60px 0px;
+  }
+  &__title {
+    @include tablet {
+      text-align: center;
+    }
+  }
+  &__nav {
+    margin-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  &__nav-item {
+    text-transform: none;
+    @include tablet {
+      font-size: 12px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    @include laptop {
+      margin-top: 30px;
+    }
+  }
+  &__sidebar {
+    @include laptop {
+      display: none;
+    }
+  }
+  &__sidebar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  &__sidebar-item {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 10px;
+    width: 215px;
+    height: 180px;
+    z-index: 1;
+  }
+  &__sidebar-bg {
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+    z-index: -1;
+  }
+  &__sidebar-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px 0px;
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    background-color: var(--emperor);
+  }
+  &__products {
+    flex: 0 1 calc(100% - 240px);
+    @include laptop {
+      flex-basis: 100%;
+    }
+  }
+  &__products-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    @include mobile-min {
+      gap: 10px;
+    }
+  }
+  &__item {
+    border-radius: 5px;
+    border: 1px solid var(--gray);
+    flex: 0 1 calc(25% - 15px);
+    padding: 15px;
+    @include desktop {
+      flex-basis: calc(33% - 11px);
+    }
+    @include tablet {
+      flex-basis: calc(50% - 10px);
+    }
+    @include mobile-min {
+      padding: 8px;
+    }
+  }
+  &__img {
+    display: block;
+    margin: 0 auto;
+    width: 195px;
+    height: 190px;
+    object-fit: cover;
+    @include tablet {
+      width: 150px;
+    }
+  }
+  &__item-title {
+    margin-top: 3px;
+    font-size: 12px;
+    line-height: 120%;
+    text-align: center;
+    color: black;
+  }
+  &__specifications {
+    margin-top: 15px;
+    li {
+      font-weight: 500;
+      font-size: 11px;
+      line-height: 180%;
+    }
+    @include tablet {
+      text-align: center;
+    }
+  }
+  &__price {
+    margin-top: 8px;
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    @include mobile-min {
+      font-size: 12px;
+    }
+  }
+  &__item-btn {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    @include mobile-min {
+      font-size: 12px;
+    }
+  }
+}
