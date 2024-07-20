@@ -21,9 +21,6 @@
   &__title {
     font-size: 20px;
     text-align: center;
-    @include tablet {
-      font-size: 16px;
-    }
   }
   &__content {
     margin: 15px 0px 0px 0px;

@@ -588,7 +588,8 @@ body {
   font-size: 12px;
   line-height: 120%;
   text-align: center;
-  color: #000
+  color: #000;
+  -webkit-text-size-adjust: 100%
 }
 .catalog__specifications {
   margin-top: 15px
@@ -649,7 +650,9 @@ body {
   align-items: center;
   padding-left: 80px;
   font-size: 20px;
-  font-weight: 500
+  font-weight: 500;
+  color: #000;
+  -webkit-text-fill-color: #000
 }
 .answers__btn::after,
 .answers__btn::before {
@@ -752,6 +755,28 @@ body {
 .contact__social-content {
   font-weight: 500;
   font-size: 14px
+}
+.messenegers {
+  position: fixed;
+  right: 0;
+  top: 200px;
+  z-index: 100;
+  border-radius: 10px 0 0 10px;
+  background-color: #484848
+}
+.messenegers__item {
+  display: block;
+  padding: 15px
+}
+.messenegers__item:not(:last-child) {
+  border-bottom: 1px solid #656565
+}
+.messenegers__icon {
+  display: block;
+  width: 44px;
+  height: 44px;
+  -webkit-transform: transform .2s ease;
+  transform: transform .2s ease
 }
 .footer {
   position: relative;
@@ -953,14 +978,14 @@ body {
   .catalog__specifications {
     text-align: center
   }
+  .catalog__price {
+    text-align: center
+  }
   .contact {
     padding-bottom: 10px
   }
   .contact__wrapper {
     padding: 40px 30px 30px 30px
-  }
-  .contact__title {
-    font-size: 16px
   }
   .contact__form {
     border: none;
@@ -980,9 +1005,29 @@ body {
   .contact__btn {
     width: 100%
   }
+  .messenegers {
+    display: flex;
+    right: 15px;
+    bottom: 10px;
+    top: auto;
+    border-radius: 50px
+  }
+  .messenegers__item:not(:last-child) {
+    border: none
+  }
+  .messenegers__item {
+    padding: 5px
+  }
+  .messenegers__icon {
+    width: 35px;
+    height: 35px
+  }
   .footer {
     color: var(--emperor);
     background-color: transparent
+  }
+  .footer__container {
+    justify-content: center
   }
   .footer__logo-img {
     display: none
@@ -1047,6 +1092,10 @@ body {
   .contact__social-btn:hover {
     -webkit-transform: scale(1.1);
     transform: scale(1.1)
+  }
+  .messenegers__item:hover .messenegers__icon {
+    -webkit-transform: scale(1.07);
+    transform: scale(1.07)
   }
   .footer__politics:hover {
     color: var(--green)

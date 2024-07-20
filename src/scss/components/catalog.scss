@@ -110,6 +110,7 @@
     line-height: 120%;
     text-align: center;
     color: black;
+    -webkit-text-size-adjust: 100%;
   }
   &__specifications {
     margin-top: 15px;
@@ -127,6 +128,9 @@
     display: block;
     font-weight: 700;
     font-size: 14px;
+    @include tablet {
+      text-align: center;
+    }
     @include mobile-min {
       font-size: 12px;
     }

@@ -1,0 +1,43 @@
+.messenegers {
+  position: fixed;
+  right: 0;
+  top: 200px;
+  z-index: 100;
+  border-radius: 10px 0 0 10px;
+  background-color: #484848;
+  @include tablet {
+    display: flex;
+    right: 15px;
+    bottom: 10px;
+    top: auto;
+    border-radius: 50px;
+  }
+  &__item {
+    display: block;
+    padding: 15px;
+    @include hover {
+      .messenegers__icon {
+        transform: scale(1.07);
+      }
+    }
+    &:not(:last-child) {
+      border-bottom: 1px solid #656565;
+      @include tablet {
+        border: none;
+      }
+    }
+    @include tablet {
+      padding: 5px;
+    }
+  }
+  &__icon {
+    display: block;
+    width: 44px;
+    height: 44px;
+    transform: transform .2s ease;
+    @include tablet {
+      width: 35px;
+      height: 35px;
+    }
+  }
+}
