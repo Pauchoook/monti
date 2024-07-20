@@ -1,7 +1,9 @@
 .footer {
+  position: relative;
   padding: 15px 0px;
   color: white;
   background-color: black;
+  z-index: 1;
   @include tablet {
     color: var(--emperor);
     background-color: transparent

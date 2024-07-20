@@ -754,9 +754,11 @@ body {
   font-size: 14px
 }
 .footer {
+  position: relative;
   padding: 15px 0;
   color: #fff;
-  background-color: #000
+  background-color: #000;
+  z-index: 1
 }
 .footer__container {
   display: flex;
